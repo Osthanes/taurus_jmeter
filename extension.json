@@ -11,6 +11,32 @@
             "inclusion" : "always"
         }
     ],
+    "params": [
+        {
+            "name": "CONCURRENCY",
+            "type": "Text",
+            "required": "true",
+            "default_value": "10",
+            "label_key": "CONCURRENCY_KEY",
+            "desc_key": "CONCURRENCY_DESC"
+        },
+        {
+            "name": "RAMP_UP",
+            "type": "Text",
+            "required": "true",
+            "default_value": "1m",
+            "label_key": "RAMP_UPY_KEY",
+            "desc_key": "RAMP_UP_DESC"
+        },
+        {
+            "name": "DURATION",
+            "type": "Text",
+            "required": "true",
+            "default_value": "1m30s",
+            "label_key": "DURATION_KEY",
+            "desc_key": "DURATION_DESC"
+        }
+    ],
     "outputs": [
         {
             "type": "Artifacts",
