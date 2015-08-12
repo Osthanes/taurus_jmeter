@@ -38,7 +38,10 @@ echo -e \"Init runtime of `date -u -d @\"$INIT_EST_TIME\" +\'%-Mm %-Ss\'`\"
 APP_URL=$(cf app $APP_NAME | grep 'urls:' | awk '{print $2}' | cut -d '*' -f 2)
 export APP_URL
 
-${EXT_DIR}/run.py
+pip install bzt
+
+#${EXT_DIR}/run.py
+bzt ${EXT_DIR}/test.yml
 RESULT=$?
 
 if [ $RESULT -ne 0 ]; then

@@ -1,5 +1,5 @@
-# taurus_jmeter
-**(Experimental)** A pipeline test extension for Taurus/JMeter
+# Taurus / JMeter IDS Test Extension
+**(Experimental)** A Bluemix Delivery Pipeline test extension for Taurus/JMeter
 
 # Documentation
 
