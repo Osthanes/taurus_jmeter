@@ -64,17 +64,16 @@ echo -e \"Init runtime of `date -u -d @\"$INIT_EST_TIME\" +\'%-Mm %-Ss\'`\"
 APP_URL=$(cf app $APP_NAME | grep 'urls:' | awk '{print $2}' | cut -d '*' -f 2)
 export APP_URL
 
-echo Installing python-pip...
-sudo apt-get -qq install python-pip
+sudo apt-get -qq install python python-tk python-pip python-dev
+sudo apt-get -qq install default-jre-headless
+sudo apt-get -qq install libxml2-dev libxslt-dev zlib1g-dev
 
-echo Installing dependencies...
-sudo apt-get -qq install libxml2-dev libxslt1-dev python-dev python-tk zlib1g-dev
+#libyaml-dev
 
-echo Installing btz...
 sudo pip install -q bzt
 
 #${EXT_DIR}/run.py
-bzt ${EXT_DIR}/test.yml
+bzt ${EXT_DIR}/test.yml -o modules.console.disable=true
 RESULT=$?
 
 if [ $RESULT -ne 0 ]; then

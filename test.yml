@@ -9,3 +9,14 @@ execution:
     requests:
       - http://blazedemo.com/
       - http://blazedemo.com/vacation.html
+
+reporting:
+  - final_stats
+  - module: blazemeter
+  - module: junit-xml
+    filename: result.xml
+    data-source: pass-fail
+
+modules:
+  blazemeter:
+    browser-open: start
