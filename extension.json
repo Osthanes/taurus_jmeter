@@ -25,7 +25,7 @@
             "type": "Text",
             "required": "true",
             "default_value": "1m",
-            "label_key": "RAMP_UPY_KEY",
+            "label_key": "RAMP_UP_KEY",
             "desc_key": "RAMP_UP_DESC"
         },
         {
