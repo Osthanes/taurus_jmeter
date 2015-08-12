@@ -81,7 +81,6 @@ if [ $RESULT -ne 0 ]; then
 fi
 
 "
-    }
     },
     "project": "https://hub.jazz.net/project/alchemy/Alchemy-Ostanes",
     "project_example": "",
