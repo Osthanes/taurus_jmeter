@@ -67,6 +67,9 @@ export APP_URL
 echo Installing python-pip...
 sudo apt-get -qq install python-pip
 
+echo Installing dependencies...
+sudo apt-get -qq install libxml2-dev libxslt1-dev python-dev zlib1g-dev
+
 echo Installing btz...
 sudo pip install -q bzt
 
